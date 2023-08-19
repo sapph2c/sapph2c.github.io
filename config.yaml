@@ -1,0 +1,248 @@
+baseURL: "https://www.ashleynikirk.com"
+languageCode: "en-us"
+title: "Ashley Nikirk"
+theme: hugo-profile
+
+outputs:
+  home:
+    - "HTML"
+    - "RSS"
+    - "JSON"
+  page:
+    - "HTML"
+    - "RSS"
+
+Paginate: 3
+enableRobotsTXT: true
+# disqusShortname: your-disqus-shortname
+# googleAnalytics: G-MEASUREMENT_ID
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+params:
+  title: "Ashley Nikirk"
+  description: Personal site.
+  # staticPath: ""  # The path to serve the static files from
+  favicon: "/fav.png"
+
+  # Whether to serve bootstrap css and js files from CDN or not. Can be set to true, "css" or "js" to choose between
+  # serving both, only the css, or only the js files through the CDN. Any other value will make so that CDN is not used.
+  # Note the lack of "" in true, it should be of boolean type.
+  useBootstrapCDN: false
+
+  # If you want to load dynamically responsive images from Cloudinary
+  # This requires your images to be uploaded + hosted on Cloudinary
+  # Uncomment and change YOUR_CLOUD_NAME to the Cloud Name in your Cloudinary console
+  # cloudinary_cloud_name: "YOUR_CLOUD_NAME"
+
+  # Whether the fade animations on the home page will be enabled
+  animate: true
+
+  theme:
+    # disableThemeToggle: true
+    # defaultTheme: "light" # dark
+
+  font:
+    fontSize: 1rem # default: 1rem
+    fontWeight: 400 # default: 400
+    lineHeight: 1.5 # default: 1.5
+    textAlign: left # default: left
+
+  # color preference
+  # color:
+  #   textColor:
+  #   secondaryTextColor:
+  #   backgroundColor:
+  #   secondaryBackgroundColor:
+  #   primaryColor:
+  #   secondaryColor:
+
+  #   darkmode:
+  #     textColor:
+  #     secondaryTextColor:
+  #     backgroundColor:
+  #     secondaryBackgroundColor:
+  #     primaryColor:
+  #     secondaryColor:
+
+  # If you want to customize the menu, you can change it here
+  navbar:
+    align: ms-auto # Left: ms-auto | center: mx-auto | right: me-auto | Default: ms-auto
+    # brandLogo: "/logo.png" # Logo for the brand | default is the favicon variable
+    # showBrandLogo: false # Show brand logo in nav bar | default is true
+    brandName: "Ashley Nikirk" # Brand name for the brand | default is the title variable
+    disableSearch: false
+    # searchPlaceholder: "Search"
+    menus:
+      disableAbout: true
+      disableExperience: false
+      disableEducation: false
+      disableProjects: false
+      disableAchievements: false
+      disableContact: true
+
+  # Hero
+  hero:
+    enable: true
+    intro: "Hi, my name is"
+    title: "Ashley Nikirk."
+    subtitle: "I write software and occassionaly hack"
+    content: "I am a third-year BS student at Rochester Institute of Technology. I am majoring in Computing Security and have a passion for software engineering and homelabbing."
+    image: /images/pfp.jpeg
+    bottomImage:
+      enable: true
+    # roundImage: true # Make hero image circular | default false
+    button:
+      enable: true
+      name: "Resume"
+      url: "/resume.pdf"
+      download: true
+      newPage: false
+    socialLinks:
+      fontAwesomeIcons:
+        - icon: fab fa-github
+          url: https://github.com/sapph2c
+        - icon: fab fa-linkedin
+          url: https://linkedin.com/in/ashley-nikirk
+
+  # About
+  about:
+    enable: false
+
+  # Experience
+  experience:
+    enable: true
+    items:
+      - job: "Software Engineer Intern"
+        company: "Apple"
+        companyUrl: "https://www.apple.com/"
+        date: "May 2023 - August 2023"
+        featuredLink:
+          enable: false
+        content: "I designed and developed scalable microservices in Go that improved Apple's security posture. Additionally I developed a secrets scanning tool to efficiently search all of Apple's logging solutions."
+
+      - job: "Cyber Resiliency Intern"
+        company: "MITRE"
+        companyUrl: "https://www.mitre.org/"
+        date: "May 2022 - March 2023"
+        featuredLink:
+          enable: false
+        content: "I adapted practices from the CISA/NSA joint advisory on hardening Kubernetes to be used by the Kyverno policy engine. Additionally I created a CLI using Python to interact with the Kubernetes API."
+
+  # Education
+  education:
+    enable: true
+    # title: "Custom Name"
+    index: false
+    items:
+      - title: "Bachelor of Science in Computing Security"
+        school:
+          name: "Rochester Institute of Technology"
+          url: "https://example.org"
+        date: "2021 - 2025"
+        GPA: "3.68 out of 4.00"
+        content: Extracurricular Activities
+
+          - President of RIT's Women in CyberSecurity (WiCyS) Chapter (2022).
+
+          - Member of RITSEC, RIT's security club and the largest academic club on campus (2021-Pres.)
+
+          - Developer for RITSEC's Red Team, which creates malware for use in cybersecurit competitions.
+
+          - Lead for the Information Security Talent Search (ISTS) in 2023.
+        featuredLink:
+          enable: true
+          name: "My academic record"
+          url: "https://example.com"
+
+  # Achievements
+  achievements:
+    enable: true
+    # title: "Custom Name"
+    items:
+      - title: RIT Five-Year Presidential Scholarship
+        content: Maximum academic scholarship amount offered by RIT. The scholarship is renewed automatically each year.
+      - title: Dean's List
+        content: Received a 3.4 GPA or higher while taking twelve or more credits in Fall & Spring 2021 & Fall 2022.
+        url: https://example.com
+
+  # projects
+  projects:
+    enable: true
+    # title: "Custom Name"
+    items:
+      - title: Bifrost
+        content: A command and control (C2) server built with Flask. Malleable agent written in Go.
+        image: /images/projects/bifrost.png
+        featured:
+          name: Project Landing Page
+          link: https://github.com/sapph2c/bifrost
+        badges:
+          - "Flask"
+          - "Python"
+          - "Go"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/sapph2c/bifrost
+
+      - title: Homelab
+        content: Managed home networking and gained intimate experience with virtualization, containers, CI/CD, and Unraid.
+        image: /images/projects/homelab.png
+        featured:
+          name: Project Landing Page
+          link: https://github.com/sapph2c/homelab
+        badges:
+          - "Kubernetes"
+          - "Docker"
+          - "GitOps"
+          - "CI/CD"
+          - "Microservices"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/sapph2c/homelab
+
+  #Contact
+  contact:
+    enable: false
+
+  footer:
+    recentPosts:
+      path: "blogs"
+      count: 3
+      title: Recent Posts
+      enable: true
+      disableFeaturedImage: false
+    socialNetworks:
+      github: https://github.com/sapph2c
+      linkedin: https://www.linkedin.com/in/ashley-nikirk/
+
+  # List pages like blogs and posts
+  listPages:
+    disableFeaturedImage: false
+
+  # Single pages like blog and post
+  singlePages:
+    readTime:
+      enable: true
+      content: "min read"
+    scrollprogress:
+      enable: true
+
+  # For translations
+  terms:
+    read: "Read"
+    toc: "Table Of Contents"
+    copyright: "All rights reserved"
+    pageNotFound: "Page not found"
+    emailText: "Check out this site"
+
+  datesFormat:
+    article: "Jan 2, 2006"
+    articleList: "Jan 2, 2006"
+    articleRecent: "Jan 2, 2006"
+
+  #customScripts: -| # You can add custom scripts which will be added before </body> tag
+  #  <script type="text/javascript"><!-- any script here --></script>
